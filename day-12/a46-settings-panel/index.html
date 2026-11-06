@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Persistent Settings Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Settings</h1>
+    <form id="settings-form" class="card">
+      <label for="displayName">Display name</label><input id="displayName" maxlength="30" autocomplete="off">
+      <label for="theme">Theme</label><select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select>
+      <label for="fontSize">Font size: <output id="fontSizeOut">16</output> px</label><input id="fontSize" type="range" min="14" max="22" step="1">
+      <label for="language">Language</label><select id="language"><option value="en">English</option><option value="hi">Hindi</option></select>
+      <label><input id="notifications" type="checkbox"> Enable notifications</label>
+      <div class="row" style="margin-top:1rem"><button type="button" id="reset" class="ghost">Reset to defaults</button></div>
+      <p id="status" class="ok" role="status" aria-live="polite"></p>
+    </form>
+    <section class="card" aria-label="Preview">
+      <h2>Preview</h2>
+      <p id="preview"></p>
+      <p id="state"></p>
+    </section>
+  </main>
+  <script src="storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

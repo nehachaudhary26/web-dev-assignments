@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>To-Do App</h1>
+    <form id="todo-form" class="card row" novalidate>
+      <label for="todo-input" class="sr-only">New task</label>
+      <input id="todo-input" maxlength="120" placeholder="What needs doing?" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+    <p id="message" class="error" role="status" aria-live="polite"></p>
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="active" aria-pressed="false">Active</button>
+      <button type="button" data-filter="completed" aria-pressed="false">Completed</button>
+    </div>
+    <ul id="todo-list" class="items"></ul>
+    <p id="empty" class="card" hidden>Nothing here. Add a task above.</p>
+    <div class="footer"><span id="count"></span><button id="clear-completed" type="button" class="ghost">Clear completed</button></div>
+  </main>
+  <script src="todo-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

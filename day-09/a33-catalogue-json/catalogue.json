@@ -1,0 +1,14 @@
+{
+  "store": "Tech Corner",
+  "currency": "INR",
+  "products": [
+    { "id": "C-001", "name": "AeroSound Headphones", "category": "Audio", "price": 2499, "stock": 12, "tags": ["wireless", "bluetooth"], "specs": { "battery": "30 hours", "weightGrams": 250 } },
+    { "id": "C-002", "name": "PulseBox Speaker", "category": "Audio", "price": 2199, "stock": 0, "tags": ["portable", "waterproof"], "specs": { "battery": "12 hours", "weightGrams": 600 } },
+    { "id": "C-003", "name": "FitTime Smart Watch", "category": "Wearables", "price": 3299, "stock": 7, "tags": ["fitness", "bluetooth"], "specs": { "battery": "5 days", "weightGrams": 45 } },
+    { "id": "C-004", "name": "StepUp Fitness Band", "category": "Wearables", "price": 1499, "stock": 25, "tags": ["fitness"], "specs": { "battery": "10 days", "weightGrams": 25 } },
+    { "id": "C-005", "name": "ClickPro Keyboard", "category": "Accessories", "price": 1899, "stock": 15, "tags": ["mechanical", "usb"], "specs": { "layout": "75%", "weightGrams": 700 } },
+    { "id": "C-006", "name": "GlidePoint Mouse", "category": "Accessories", "price": 699, "stock": 40, "tags": ["wireless", "ergonomic"], "specs": { "dpi": 1600, "weightGrams": 90 } },
+    { "id": "C-007", "name": "ClearView Webcam", "category": "Accessories", "price": 1599, "stock": 0, "tags": ["1080p", "usb"], "specs": { "resolution": "1920x1080", "weightGrams": 120 } },
+    { "id": "C-008", "name": "VoltMax Power Bank", "category": "Accessories", "price": 1199, "stock": 30, "tags": ["10000mAh", "fast-charge"], "specs": { "capacity": "10000 mAh", "weightGrams": 220 } }
+  ]
+}

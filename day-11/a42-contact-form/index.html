@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Contact Us</h1>
+    <form id="contact-form" class="card" novalidate>
+      <label for="name">Name</label><input id="name" name="name" autocomplete="name" aria-describedby="name-error"><p id="name-error" class="error"></p>
+      <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error"><p id="email-error" class="error"></p>
+      <label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error"><p id="phone-error" class="error"></p>
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject" aria-describedby="subject-error"><option value="">Choose...</option><option>General</option><option>Feedback</option><option>Support</option><option>Collaboration</option></select><p id="subject-error" class="error"></p>
+      <label for="message">Message</label><textarea id="message" name="message" rows="4" aria-describedby="message-error"></textarea><p id="message-error" class="error"></p>
+      <label><input id="agree" name="agree" type="checkbox" aria-describedby="agree-error"> I agree to be contacted</label><p id="agree-error" class="error"></p>
+      <button type="submit">Send message</button>
+    </form>
+    <section id="summary" class="card" aria-live="polite" hidden>
+      <h2>Submission summary</h2>
+      <dl id="summary-list"></dl>
+    </section>
+  </main>
+  <script src="validation.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

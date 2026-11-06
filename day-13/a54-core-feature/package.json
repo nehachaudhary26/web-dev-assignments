@@ -1,0 +1,7 @@
+{
+  "name": "studytrack",
+  "version": "0.9.0-rc1",
+  "description": "StudyTrack - a simple study planner (vanilla HTML, CSS, JavaScript)",
+  "scripts": { "test": "node tests/utils.test.js && node tests/state.test.js && node tests/storage.test.js" },
+  "license": "MIT"
+}

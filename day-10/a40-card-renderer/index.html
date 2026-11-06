@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Renderer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Reusable Card Renderer</h1><p>Cards are built with <code>renderCard()</code> using <code>createElement</code> and <code>textContent</code>.</p></header>
+  <div class="controls"><button id="add">Add a card</button><button id="clear">Clear all</button></div>
+  <p id="detail" role="status" aria-live="polite"></p>
+  <main id="cards" class="grid"></main>
+  <script src="card.js"></script>
+  <script>
+    const items = [
+      { title: "ExamGeniusAI", icon: "\u{1F4DA}", description: "RAG-based assistant concept for PDFs and slides.", tags: ["RAG", "LLM", "Python"], url: "https://linkedin.com/in/aish-kalra-5170ab387", linkText: "View profile" },
+      { title: "House Price Prediction", icon: "\u{1F3E0}", description: "Linear Regression model with EDA.", tags: ["Scikit-learn", "Pandas"] },
+      { title: "<script>alert('xss')<\/script> Unsafe title", icon: "\u26A0\uFE0F", description: "This title contains HTML. It must show as plain text.", tags: ["<b>bold?</b>"], url: "javascript:alert(1)", linkText: "Blocked link" },
+    ];
+    const container = document.getElementById("cards");
+    const detail = document.getElementById("detail");
+    const options = { onSelect: (d) => { detail.textContent = `Selected: ${d.title}`; } };
+    renderCards(container, items, options);
+    let n = 1;
+    document.getElementById("add").addEventListener("click", () => {
+      items.push({ title: `New card ${n++}`, icon: "\u2728", description: "Added dynamically.", tags: ["demo"] });
+      renderCards(container, items, options);
+    });
+    document.getElementById("clear").addEventListener("click", () => { items.length = 0; renderCards(container, items, options); detail.textContent = ""; });
+  </script>
+</body>
+</html>

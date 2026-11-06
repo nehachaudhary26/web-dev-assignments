@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#panels">Skip to content</a>
+  <main class="wrap">
+    <section class="profile" aria-label="Profile header">
+      <div class="avatar" aria-hidden="true">NH</div>
+      <div class="who"><h1 id="p-name">Neha Chaudhary</h1><p id="p-role">BCA (Artificial Intelligence) Student</p></div>
+      <div class="actions">
+        <button id="follow-btn" class="btn" aria-pressed="false">Follow</button>
+        <button id="theme-btn" class="btn ghost" aria-pressed="false">Dark mode</button>
+      </div>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <div class="tabs" role="tablist" aria-label="Profile sections">
+      <button class="tab is-active" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" tabindex="0">About</button>
+      <button class="tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1">Skills</button>
+      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1">Contact</button>
+    </div>
+    <div id="panels">
+      <section class="panel is-active" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+        <p>BCA (Artificial Intelligence) student at Invertis University, focused on Machine Learning, Generative AI and RAG applications. Currently learning web development.</p>
+      </section>
+      <section class="panel" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills" hidden>
+        <div class="filters" role="group" aria-label="Filter skills by area">
+          <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="programming" aria-pressed="false">Programming</button>
+          <button class="chip" data-filter="data" aria-pressed="false">Data</button>
+          <button class="chip" data-filter="ai" aria-pressed="false">AI</button>
+        </div>
+        <ul id="skill-list" class="skills">
+          <li data-category="programming">Python</li><li data-category="programming">C</li><li data-category="programming">Java</li>
+          <li data-category="data">SQL</li><li data-category="data">Pandas</li><li data-category="data">NumPy</li>
+          <li data-category="ai">Scikit-learn</li><li data-category="ai">RAG</li><li data-category="ai">LLM APIs</li>
+        </ul>
+      </section>
+      <section class="panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" hidden>
+        <p><a href="mailto:nehabhullar2602@gmail.com">nehabhullar2602@gmail.com</a></p>
+        <!-- <p><a href="https://linkedin.com/in/nehachaudhary-5170ab387">LinkedIn profile</a></p> -->
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

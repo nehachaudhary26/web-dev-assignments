@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2ff; color: #1d2433; line-height: 1.5; }
+.app { max-width: 640px; margin: 1.5rem auto; padding: 0 1rem; }
+.card { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,.08); margin-bottom: 1rem; }
+h1 { margin-top: 0; }
+label { display: block; font-weight: bold; margin: .75rem 0 .25rem; }
+input, select, textarea { width: 100%; padding: .6rem; border: 1px solid #aab; border-radius: 8px; font: inherit; background: #fff; color: inherit; }
+input[type="checkbox"], input[type="radio"] { width: auto; }
+button { padding: .55rem 1rem; border: 2px solid #2d5be3; background: #2d5be3; color: #fff; border-radius: 8px; cursor: pointer; font: inherit; }
+button.ghost { background: #fff; color: #2d5be3; }
+button:hover { opacity: .9; }
+:focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.error { color: #b00020; font-size: .9rem; margin: .25rem 0 0; min-height: 1.1rem; }
+.ok { color: #1b7f3b; font-weight: bold; }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b00020; }
+.row { display: flex; gap: .5rem; flex-wrap: wrap; }
+.row > input { flex: 1 1 200px; }
+.filters { display: flex; gap: .4rem; flex-wrap: wrap; margin: .75rem 0; }
+.filters button { border-radius: 999px; padding: .3rem .9rem; background: #fff; color: #2d5be3; }
+.filters button[aria-pressed="true"] { background: #2d5be3; color: #fff; }
+ul.items { list-style: none; padding: 0; margin: 0; }
+.book { background: #fff; border-radius: 10px; padding: .8rem 1rem; margin-bottom: .6rem; display: grid; grid-template-columns: 1fr auto auto; gap: .6rem; align-items: center; box-shadow: 0 1px 6px rgba(0,0,0,.08); }
+.book strong { display: block; } .book .by { color: #666; font-size: .9rem; }
+.book select { width: auto; } .book.finished strong { text-decoration: line-through; color: #777; }
+@media (max-width: 480px) { .book { grid-template-columns: 1fr; } }

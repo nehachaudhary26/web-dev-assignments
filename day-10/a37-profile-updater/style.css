@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2ff; color: #222; }
+.layout { max-width: 900px; margin: 2rem auto; padding: 0 1rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
+.card { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+h1, h2 { margin-top: 0; } .role { color: #2d5be3; font-weight: bold; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; padding: 0; }
+.chips li { background: #e6edff; color: #2d5be3; padding: .25rem .8rem; border-radius: 999px; }
+label { display: block; font-weight: bold; margin: .75rem 0 .25rem; }
+input, textarea { width: 100%; padding: .6rem; border: 1px solid #bbb; border-radius: 8px; font: inherit; }
+input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
+.buttons { display: flex; gap: .5rem; margin-top: 1rem; flex-wrap: wrap; }
+button { padding: .6rem 1.1rem; border: 2px solid #2d5be3; background: #2d5be3; color: #fff; border-radius: 8px; cursor: pointer; font: inherit; }
+button.ghost { background: #fff; color: #2d5be3; }
+#status { min-height: 1.5rem; font-weight: bold; } #status.error { color: #b00020; } #status.ok { color: #1b7f3b; }

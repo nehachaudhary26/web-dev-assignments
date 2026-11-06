@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Content Updater</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <article class="card" aria-labelledby="p-name">
+      <h1 id="p-name">Neha Chaudhary</h1>
+      <p id="p-role" class="role">BCA (Artificial Intelligence) Student</p>
+      <p id="p-bio">Learning AI/ML and web development.</p>
+      <h2>Skills</h2>
+      <ul id="p-skills" class="chips"><li>Python</li><li>SQL</li></ul>
+    </article>
+    <form id="edit-form" class="card" novalidate>
+      <h2>Edit profile</h2>
+      <label for="in-name">Name</label><input id="in-name" maxlength="40">
+      <label for="in-role">Role</label><input id="in-role" maxlength="60">
+      <label for="in-bio">Bio</label><textarea id="in-bio" rows="3" maxlength="200"></textarea>
+      <label for="in-skill">Add a skill</label><input id="in-skill" maxlength="25">
+      <div class="buttons"><button type="submit">Update</button><button type="button" id="xss-test" class="ghost">Test unsafe text</button></div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Reading List</h1>
+    <form id="book-form" class="card" novalidate>
+      <label for="title">Book title</label><input id="title" maxlength="80" autocomplete="off">
+      <label for="author">Author (optional)</label><input id="author" maxlength="50" autocomplete="off">
+      <div class="row" style="margin-top:1rem"><button type="submit">Add book</button></div>
+      <p id="form-error" class="error" role="alert"></p>
+    </form>
+    <div class="filters" role="group" aria-label="Filter by status">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="to-read" aria-pressed="false">To read</button>
+      <button type="button" data-filter="reading" aria-pressed="false">Reading</button>
+      <button type="button" data-filter="finished" aria-pressed="false">Finished</button>
+    </div>
+    <p id="summary" role="status" aria-live="polite"></p>
+    <ul id="book-list" class="items"></ul>
+    <p id="empty" class="card" hidden>No books here yet.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

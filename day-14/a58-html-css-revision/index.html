@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML and CSS revision challenge: a pricing page for a fictional coding club.">
+  <title>CodeClub - HTML & CSS Revision</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#plans">Skip to plans</a>
+  <header class="site-header">
+    <a class="brand" href="#top">Code<span>Club</span></a>
+    <nav aria-label="Main"><ul><li><a href="#plans">Plans</a></li><li><a href="#faq">FAQ</a></li><li><a href="#join">Join</a></li></ul></nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <h1>Learn to code with friends</h1>
+      <p>Weekly workshops, project nights and mentors. Pick the plan that fits you.</p>
+      <a class="button" href="#join">Join the club</a>
+    </section>
+
+    <section id="plans" class="plans" aria-labelledby="plans-title">
+      <h2 id="plans-title">Choose a plan</h2>
+      <div class="plan-grid">
+        <article class="plan">
+          <h3>Starter</h3><p class="price">Free</p>
+          <ul><li>Monthly meetup</li><li>Community chat</li></ul>
+          <a class="button outline" href="#join">Start free</a>
+        </article>
+        <article class="plan featured">
+          <h3>Builder</h3><p class="price">&#8377;299<span>/month</span></p>
+          <ul><li>Weekly workshops</li><li>Project reviews</li><li>Certificate</li></ul>
+          <a class="button" href="#join">Choose Builder</a>
+        </article>
+        <article class="plan">
+          <h3>Mentor</h3><p class="price">&#8377;799<span>/month</span></p>
+          <ul><li>Everything in Builder</li><li>1-to-1 mentoring</li><li>Career guidance</li></ul>
+          <a class="button outline" href="#join">Choose Mentor</a>
+        </article>
+      </div>
+      <table class="compare">
+        <caption>Plan comparison</caption>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Builder</th><th scope="col">Mentor</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Workshops</th><td>Monthly</td><td>Weekly</td><td>Weekly</td></tr>
+          <tr><th scope="row">Mentoring</th><td>No</td><td>No</td><td>Yes</td></tr>
+          <tr><th scope="row">Certificate</th><td>No</td><td>Yes</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions</h2>
+      <details><summary>Do I need experience?</summary><p>No. We start from the basics of HTML and CSS.</p></details>
+      <details><summary>Can I cancel anytime?</summary><p>Yes. Plans renew monthly and you can stop at any time.</p></details>
+      <details><summary>What do I need?</summary><p>A laptop, a browser and a code editor such as VS Code.</p></details>
+    </section>
+
+    <section id="join" class="join" aria-labelledby="join-title">
+      <h2 id="join-title">Join the club</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Your details</legend>
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" required autocomplete="name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+          <label for="plan">Plan</label>
+          <select id="plan" name="plan"><option>Starter</option><option selected>Builder</option><option>Mentor</option></select>
+        </fieldset>
+        <fieldset>
+          <legend>Interests</legend>
+          <label class="inline"><input type="checkbox" name="interest" value="web"> Web</label>
+          <label class="inline"><input type="checkbox" name="interest" value="ai"> AI / ML</label>
+          <label class="inline"><input type="checkbox" name="interest" value="data"> Data</label>
+        </fieldset>
+        <button class="button" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 CodeClub (fictional). Built for HTML &amp; CSS revision.</p></footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element Selection Challenge</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+    #playground { border: 2px dashed #2d5be3; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; }
+    .card { border: 1px solid #ccc; padding: .5rem; margin: .5rem 0; border-radius: 6px; }
+    .featured { background: #fff3b0; }
+    .tag { background: #e6edff; padding: 0 .4rem; border-radius: 4px; margin-right: .3rem; }
+    table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+    th, td { border: 1px solid #ddd; padding: .4rem .6rem; text-align: left; vertical-align: top; }
+    th { background: #1b3a63; color: #fff; }
+    code { background: #f0f2f7; padding: 0 .25rem; }
+    .wrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Element Selection Challenge</h1>
+  <p>The dashed box is the page we select from. The table shows each challenge, the code, and the result.</p>
+  <div id="playground">
+    <h2 id="main-title">Course Dashboard</h2>
+    <ul id="menu"><li class="active">Home</li><li>Courses</li><li>Contact</li></ul>
+    <section id="cards">
+      <div class="card featured" data-level="beginner"><h3>HTML Basics</h3><span class="tag">html</span><span class="tag">web</span></div>
+      <div class="card" data-level="beginner"><h3>CSS Layout</h3><span class="tag">css</span></div>
+      <div class="card" data-level="advanced"><h3>JavaScript DOM</h3><span class="tag">js</span><button class="enroll">Enroll</button></div>
+    </section>
+    <form id="signup"><input type="text" name="name" placeholder="Name"><input type="email" name="email" placeholder="Email"></form>
+    <p><a href="https://example.com" target="_blank">External link</a> | <a href="#cards">Internal link</a></p>
+  </div>
+  <div class="wrap"><table id="results"><thead><tr><th>#</th><th>Challenge</th><th>Code</th><th>Result</th></tr></thead><tbody></tbody></table></div>
+  <script src="sheet.js"></script>
+</body>
+</html>

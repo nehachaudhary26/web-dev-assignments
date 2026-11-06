@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scope & Hoisting Worksheet</title>
+  <style>body{font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:1rem}pre{background:#111;color:#0f0;padding:1rem;border-radius:8px;overflow-x:auto;white-space:pre-wrap}</style>
+</head>
+<body>
+  <h1>Scope & Hoisting Worksheet</h1>
+  <p>Output of <code>worksheet.js</code> (also in the browser console, or run <code>node worksheet.js</code>).</p>
+  <pre id="out"></pre>
+  <script>const out=document.getElementById('out');const _l=console.log;console.log=(...a)=>{_l(...a);out.textContent+=a.join(' ')+'\n'};</script>
+  <script src="worksheet.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #222; }
+.hero { background: linear-gradient(135deg, #2d5be3, #7b3fe4); color: #fff; text-align: center; padding: 5rem 1.5rem; }
+.hero h1 { font-size: 2.5rem; margin: 0 0 .5rem; }
+.hero p { font-size: 1.2rem; margin: 0 0 1.5rem; }
+.cta { display: inline-block; background: #fff; color: #2d5be3; padding: .8rem 1.8rem; border-radius: 999px; text-decoration: none; font-weight: bold; }
+.features { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 3rem 1.5rem; background: #f4f6f8; }
+.feature { flex: 1 1 200px; max-width: 260px; background: #fff; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,.08); }

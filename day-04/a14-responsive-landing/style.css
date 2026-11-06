@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #222; line-height: 1.6; }
+.navbar { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background: #1b3a63; padding: .8rem 5%; }
+.logo { color: #fff; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+.menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; } .menu a { color: #fff; text-decoration: none; }
+.menu a:hover { color: #9cc0ff; }
+#toggle, .burger { display: none; } .burger { color: #fff; font-size: 1.7rem; cursor: pointer; }
+.hero { text-align: center; padding: 6rem 5%; color: #fff; background: linear-gradient(135deg, #2d5be3, #7b3fe4); }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); max-width: 720px; margin: .25rem auto .75rem; }
+.hero p { max-width: 600px; margin-left: auto; margin-right: auto; } .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: .85rem; }
+.btn { display: inline-block; margin-top: 1rem; background: #fff; color: #2d5be3; padding: .8rem 1.8rem; border-radius: 999px; text-decoration: none; font-weight: bold; }
+.block { padding: 4rem 5%; max-width: 1100px; margin: auto; } .alt { background: #f4f6f8; max-width: none; } .alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.block h2 { color: #1b3a63; margin-top: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: .6rem; } .chips span { background: #e6edff; color: #2d5be3; padding: .4rem 1rem; border-radius: 999px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+.cards article { background: #fff; padding: 1.25rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.08); } .cards h3 { margin-top: 0; }
+footer { text-align: center; padding: 1.25rem; background: #1b3a63; color: #cfd8ea; font-size: .9rem; }
+@media (max-width: 700px) {
+  .burger { display: block; } .menu { display: none; flex-direction: column; width: 100%; gap: 0; margin-top: .5rem; }
+  .menu a { display: block; padding: .7rem 0; border-top: 1px solid rgba(255,255,255,.15); }
+  #toggle:checked ~ .menu { display: flex; } .hero { padding: 4rem 5%; } .block { padding: 3rem 5%; }
+}

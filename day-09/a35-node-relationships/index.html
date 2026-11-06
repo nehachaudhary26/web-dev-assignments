@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM Node Relationships</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+    #tree-demo, #tree-demo * { outline: 1px dashed #bbb; outline-offset: 2px; }
+    #tree-demo { padding: 1rem; margin-bottom: 1rem; }
+    #tree-demo *:hover { outline-color: #2d5be3; cursor: pointer; }
+    .selected { background: #fff3b0; }
+    #info { background: #f4f6f8; padding: 1rem; border-radius: 8px; }
+    #info dt { font-weight: bold; margin-top: .5rem; }
+    #info dd { margin: 0; }
+  </style>
+</head>
+<body>
+  <h1>DOM Node Relationships</h1>
+  <p>Click any element in the dashed box to see its parent, children and siblings. The full labelled tree is in <code>NODE_RELATIONSHIPS.md</code>.</p>
+  <div id="tree-demo">
+    <header id="site-header">
+      <h1>My Blog</h1>
+      <nav><ul><li><a href="#">Home</a></li><li><a href="#">About</a></li></ul></nav>
+    </header>
+    <main>
+      <article class="post"><h2>First Post</h2><p>Hello <strong>world</strong>!</p></article>
+      <aside><p>Sidebar</p></aside>
+    </main>
+    <footer><p>Copyright 2026</p></footer>
+  </div>
+  <h2>Selected node</h2>
+  <dl id="info"><dt>Click an element above</dt><dd></dd></dl>
+  <script src="relations.js"></script>
+</body>
+</html>
